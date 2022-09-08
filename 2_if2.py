@@ -15,12 +15,32 @@
 
 """
 
+def get_string(str_1, str_2):
+    """
+    Проверка строки в первом аргументе со строкой во втором аргументе
+    """
+    if type(str_1) != type(str()) or type(str_2) != type(str()):
+        return print(0)
+    elif str_1 == str_2:
+        return print(1)
+    elif str_1 != str_2 and str_2 == 'learn':
+        return print(3)
+    elif str_1 != str_2 and len(str_1) > len(str_2):
+        return print(2)
+    
+
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
-    
+    get_string(1212, 'булочка')
+    get_string('булочка', 1212)
+    get_string('булочка', 'булочка')
+    get_string('булочкаааа', 'булочка')
+    get_string('булочка', 'learn')
+
+
 if __name__ == "__main__":
     main()

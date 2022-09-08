@@ -15,13 +15,24 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {"Как дела?": "Хорошо!", "Что делаешь?": "Программирую"}
 
 def ask_user(answers_dict):
     """
-    Замените pass на ваш код
+    Функция проверяет есть ли вопрос пользователя в словаре по ключу,
+    если вопрос есть отправляет ответ (значение ключа)
     """
-    pass
+
+    while True:
+        ask_user = input('Задай вопрос программе: ').capitalize()
+        if answers_dict.get(ask_user, False) != False:
+            print(answers_dict.get(ask_user))
+        elif ask_user == 'Пока':
+            print('Пока')
+            break
+    
+
+
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
