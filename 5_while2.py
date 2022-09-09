@@ -25,7 +25,7 @@ def ask_user(answers_dict):
 
     while True:
         ask_user = input('Задай вопрос программе: ').capitalize()
-        if answers_dict.get(ask_user) is not None:
+        if answers_dict.get(ask_user):
             print(answers_dict.get(ask_user))
         elif ask_user == 'Пока':
             return 'Пока'
