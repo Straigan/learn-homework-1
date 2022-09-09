@@ -25,14 +25,13 @@ def ask_user(answers_dict):
 
     while True:
         ask_user = input('Задай вопрос программе: ').capitalize()
-        if answers_dict.get(ask_user, False) != False:
+        if answers_dict.get(ask_user) is not None:
             print(answers_dict.get(ask_user))
         elif ask_user == 'Пока':
-            print('Пока')
-            break
+            return 'Пока'
     
 
 
     
 if __name__ == "__main__":
-    ask_user(questions_and_answers)
+    print(ask_user(questions_and_answers))

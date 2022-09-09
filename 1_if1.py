@@ -19,15 +19,15 @@ def get_employment(age_user):
     Функция определяет чем должен заниматься пользователь
     """
     if 1 <= age_user <= 6:
-        return print('Вам нужно пойти в детский сад')
+        return 'Вам нужно пойти в детский сад'
     elif 7 <= age_user <= 17:
-        return print('Вам нужно пойти в школу')
+        return 'Вам нужно пойти в школу'
     elif 18 <= age_user <= 23:
-        return print('Вам нужно пойти в ВУЗ')
+        return 'Вам нужно пойти в ВУЗ'
     elif 24 <= age_user <= 65:
-        return print('Вам нужно пойти на работу')
+        return 'Вам нужно пойти на работу'
     else:
-        return print('Вам нужно пойти на пенсию')
+        return 'Вам нужно пойти на пенсию'
 
 
 def main():
@@ -36,7 +36,7 @@ def main():
     В ней надо заменить pass на ваш код
     """
     age = abs(int(input("Сколько вам лет? ")))
-    return get_employment(age)
+    print(get_employment(age))
 
 
 if __name__ == "__main__":
